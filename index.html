@@ -58,8 +58,8 @@
     Database Sub.Bagian Program – DPUTR Kabupaten Bandung
   </h1>
 
-  <!-- Flow Container -->
-  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4 sm:gap-6 px-3 sm:px-6 w-full max-w-7xl">
+  <!-- Flow Container (auto-fit grid) -->
+  <div class="grid [grid-template-columns:repeat(auto-fit,minmax(220px,1fr))] gap-4 sm:gap-6 px-3 sm:px-6 w-full max-w-7xl">
 
     <!-- Tahap 1: Lakip-Laptap -->
     <a href="URL_SPREADSHEET_LAKIP" target="_blank" class="no-underline">
@@ -81,87 +81,29 @@
       </div>
     </a>
 
-    <!-- Tahap 3: RKA/DPA -->
-    <a href="URL_SPREADSHEET_RKA" target="_blank" class="no-underline">
-      <div class="bg-white p-6 rounded-2xl shadow-md h-48 flex flex-col items-center justify-center hover:shadow-xl hover:-translate-y-1 transition">
-        <div class="shimmer w-20 h-20 flex items-center justify-center">
-          <img src="https://img.icons8.com/color/64/accounting.png" alt="RKA-DPA" loading="lazy"/>
-        </div>
-        <h2 class="font-bold text-gray-700 mt-3 text-sm sm:text-base text-center">RKA/DPA</h2>
-      </div>
-    </a>
+    <!-- Tambahkan card lain dengan format sama -->
+    <!-- Contoh: RKA/DPA, Usulan, Musrenbang, Rekomendasi, Master Data, RUP, dll -->
 
-    <!-- Tahap 4: Rincian Usulan -->
-    <a href="URL_SPREADSHEET_USULAN" target="_blank" class="no-underline">
-      <div class="bg-white p-6 rounded-2xl shadow-md h-48 flex flex-col items-center justify-center hover:shadow-xl hover:-translate-y-1 transition">
-        <div class="shimmer w-20 h-20 flex items-center justify-center">
-          <img src="https://img.icons8.com/color/64/checklist.png" alt="Rincian Usulan" loading="lazy"/>
-        </div>
-        <h2 class="font-bold text-gray-700 mt-3 text-sm sm:text-base text-center">Rincian Usulan</h2>
-      </div>
-    </a>
-
-    <!-- Musrenbang & Epokir -->
-    <a href="https://docs.google.com/spreadsheets/d/195_7cq4hRtPkhztoDv2_fEw07tFLiPAcsCvM-ycwBQg/edit?usp=sharing" target="_blank" class="no-underline">
-      <div class="bg-white p-6 rounded-2xl shadow-md h-48 flex flex-col items-center justify-center hover:shadow-xl hover:-translate-y-1 transition">
-        <div class="shimmer w-20 h-20 flex items-center justify-center">
-          <img src="https://img.icons8.com/color/64/combo-chart.png" alt="Musrenbang Epokir" loading="lazy"/>
-        </div>
-        <h2 class="font-bold text-gray-700 mt-3 text-sm sm:text-base text-center">Musrenbang & Epokir</h2>
-      </div>
-    </a>
-
-    <!-- Tahap 5: Rekomendasi -->
-    <a href="URL_SPREADSHEET_REKOMENDASI" target="_blank" class="no-underline">
-      <div class="bg-white p-6 rounded-2xl shadow-md h-48 flex flex-col items-center justify-center hover:shadow-xl hover:-translate-y-1 transition">
-        <div class="shimmer w-20 h-20 flex items-center justify-center">
-          <img src="https://img.icons8.com/color/64/approval.png" alt="Rekomendasi" loading="lazy"/>
-        </div>
-        <h2 class="font-bold text-gray-700 mt-3 text-sm sm:text-base text-center">Rekomendasi</h2>
-      </div>
-    </a>
-
-    <!-- Master Data -->
-    <a href="URL_SPREADSHEET_REKOMENDASI" target="_blank" class="no-underline">
-      <div class="bg-white p-6 rounded-2xl shadow-md h-48 flex flex-col items-center justify-center hover:shadow-xl hover:-translate-y-1 transition">
-        <div class="shimmer w-20 h-20 flex items-center justify-center">
-          <img src="https://img.icons8.com/color/64/database.png" alt="Master Data" loading="lazy"/>
-        </div>
-        <h2 class="font-bold text-gray-700 mt-3 text-sm sm:text-base text-center">Master Link Data</h2>
-      </div>
-    </a>
-
-    <!-- Tahap 6: RUP -->
-    <a href="URL_SPREADSHEET_RUP" target="_blank" class="no-underline">
-      <div class="bg-white p-6 rounded-2xl shadow-md h-48 flex flex-col items-center justify-center hover:shadow-xl hover:-translate-y-1 transition">
-        <div class="shimmer w-20 h-20 flex items-center justify-center">
-          <img src="https://img.icons8.com/color/64/contract.png" alt="RUP" loading="lazy"/>
-        </div>
-        <h2 class="font-bold text-gray-700 mt-3 text-sm sm:text-base text-center">RUP</h2>
-      </div>
-    </a>
-
-    <!-- Dashboard Progres -->
-    <a href="https://script.google.com/macros/s/AKfycbzUjxc1jFlN_P5o689Q-66cIr1n-uChWkoI8sO4yVPdPeows2PY3SeszxNZSogStGD8JQ/exec" target="_blank" class="no-underline col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-4 xl:col-span-5">
+    <!-- Dashboard Progres (auto full span) -->
+    <a href="https://script.google.com/macros/s/AKfycbzUjxc1jFlN_P5o689Q-66cIr1n-uChWkoI8sO4yVPdPeows2PY3SeszxNZSogStGD8JQ/exec" target="_blank" class="no-underline col-span-full">
       <div class="bg-white p-6 rounded-2xl shadow-md h-32 flex flex-col items-center justify-center hover:shadow-xl hover:-translate-y-1 transition">
         <h2 class="font-bold text-gray-700 text-center text-sm md:text-lg">
           📊 Dashboard Progres Kegiatan & Keuangan TA2025
         </h2>
       </div>
     </a>
-
   </div>
 
   <!-- Dokumen Pendukung -->
   <div class="mt-12 bg-white p-6 rounded-xl shadow-lg w-11/12 md:w-4/5">
     <h3 class="text-lg font-semibold mb-4 text-gray-700">📑 Progres Kegiatan Per Unit Kerja </h3>
-    <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 text-gray-600">
+    <ul class="grid [grid-template-columns:repeat(auto-fit,minmax(200px,1fr))] gap-3 text-gray-600 text-sm">
       <li><a href="https://sites.google.com/view/bidang-jalan/progres-pekerjaan-bidang-jalan" target="_blank" class="text-blue-600 hover:underline">Bidang Jalan</a></li>
       <li><a href="https://sites.google.com/view/aplikasi-sipedas-drainase/home/progres-kegiatan-fisik-drainase" target="_blank" class="text-blue-600 hover:underline">Bidang Drainase</a></li>
       <li><a href="https://sites.google.com/view/bidang-sda/progres-pekerjaan-bidang-sda" target="_blank" class="text-blue-600 hover:underline">Bidang SDA</a></li>
-      <li><a href="https://sites.google.com/view/bangunan-gedung/progres-pekerjaan-bangunan-gedung" class="text-blue-600 hover:underline">Bidang Bangunan Gedung</a></li>
-      <li><a href="https://sites.google.com/view/tata-ruang/progres-pekerjaan-bidang-tata-ruang" class="text-blue-600 hover:underline">Bidang Tata Ruang</a></li>
-      <li><a href="https://sites.google.com/view/jas-konstruksi/progres-pekerjaan-jasa-konstruksi" class="text-blue-600 hover:underline">Bidang Jasa Konstruksi</a></li>
+      <li><a href="https://sites.google.com/view/bangunan-gedung/progres-pekerjaan-bangunan-gedung" target="_blank" class="text-blue-600 hover:underline">Bidang Bangunan Gedung</a></li>
+      <li><a href="https://sites.google.com/view/tata-ruang/progres-pekerjaan-bidang-tata-ruang" target="_blank" class="text-blue-600 hover:underline">Bidang Tata Ruang</a></li>
+      <li><a href="https://sites.google.com/view/jas-konstruksi/progres-pekerjaan-jasa-konstruksi" target="_blank" class="text-blue-600 hover:underline">Bidang Jasa Konstruksi</a></li>
     </ul>
   </div>
 
