@@ -145,9 +145,12 @@
   </div>
 
   <!-- Footer Dark -->
+ <!-- Footer Dark -->
   <footer class="mt-12 w-full bg-black/40 backdrop-blur-sm py-4 shadow-inner animate__animated animate__fadeInUp">
     <div class="flex flex-col sm:flex-row items-center justify-center gap-3 text-white px-3">
-      <i class="fa-solid fa-building text-white text-xl"></i>
+      <div class="shimmer h-10 w-10 flex items-center justify-center rounded-full">
+        <img src="assets/DPUTR HIJAU.png" alt="Logo DPUTR" class="h-10 w-10 object-contain" loading="lazy"/>
+      </div>
       <p class="text-xs sm:text-sm font-medium text-center">
         © <span id="year"></span> Dinas Pekerjaan Umum dan Tata Ruang – Kabupaten Bandung
       </p>
@@ -157,7 +160,14 @@
   <script>
     // Update tahun otomatis
     document.getElementById("year").textContent = new Date().getFullYear();
-  </script>
 
+    // Hapus shimmer ketika gambar selesai load
+    document.querySelectorAll(".shimmer img").forEach(img => {
+      img.addEventListener("load", () => {
+        img.parentElement.classList.add("loaded");
+      });
+    });
+  </script>
 </body>
 </html>
+
