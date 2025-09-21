@@ -3,26 +3,15 @@
 <head>
   <meta charset="UTF-8">
   <title>Bank Data Sub.Bag Program</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <script src="https://cdn.tailwindcss.com"></script>
   <!-- Animate.css -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-
-    <!-- Font Awesome CDN -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
+  <!-- Font Awesome CDN -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"/>
 
   <style>
-    /* Animasi delay */
-    .delay-1 { animation-delay: 0.2s; }
-    .delay-2 { animation-delay: 0.4s; }
-    .delay-3 { animation-delay: 0.6s; }
-    .delay-4 { animation-delay: 0.8s; }
-    .delay-5 { animation-delay: 1s; }
-    .delay-6 { animation-delay: 1.2s; }
-    .delay-7 { animation-delay: 1.4s; }
-    .delay-8 { animation-delay: 1.6s; }
-    .delay-9 { animation-delay: 1.8s; }
-
-    /* Shimmer loading */
+    /* Shimmer background */
     .shimmer {
       position: relative;
       overflow: hidden;
@@ -36,126 +25,103 @@
       width: 150%; height: 100%;
       background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
       animation: shimmer 1.5s infinite;
+      z-index: 0;
     }
-    @keyframes shimmer {
-      100% { transform: translateX(150%); }
-    }
-    .shimmer img { opacity: 0; transition: opacity 0.3s ease-in; }
-    .shimmer.loaded img { opacity: 1; }
-    .shimmer.loaded::after { display: none; }
   </style>
-
 </head>
 <body class="bg-gradient-to-br from-blue-600 via-indigo-600 to-purple-700 min-h-screen flex flex-col items-center py-10 font-sans">
 
   <!-- Judul -->
-  <h1 class="text-white text-3xl md:text-4xl font-bold mb-10 text-center animate__animated animate__fadeInDown">
+  <h1 class="text-white text-3xl md:text-4xl font-bold mb-10 text-center animate__animated animate__fadeInDown px-3">
     Database Sub.Bagian Program – DPUTR Kabupaten Bandung
   </h1>
 
   <!-- Container Cards -->
-  <div class="grid gap-4 sm:gap-6 px-3 sm:px-6 w-full max-w-7xl 
-              grid-cols-[repeat(auto-fit,minmax(250px,1fr))]">
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 sm:gap-6 px-3 sm:px-6 w-full max-w-7xl">
 
- <!-- Card Lakip-Laptap -->
-<a href="URL_SPREADSHEET_LAKIP" target="_blank" class="no-underline">
-  <div class="bg-white rounded-2xl shadow-md h-48 flex flex-col items-center justify-center 
-              hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] 
-              transition duration-300 ease-out">
-    <div class="w-20 h-20 flex items-center justify-center">
-      <i class="fa-solid fa-file-lines text-4xl text-blue-600"></i>
-    </div>
-    <h2 class="font-semibold text-gray-700 mt-3 text-sm sm:text-base text-center">Lakip-Laptap</h2>
-  </div>
-</a>
+    <!-- Card Lakip-Laptap -->
+    <a href="URL_SPREADSHEET_LAKIP" target="_blank" class="no-underline">
+      <div class="bg-white rounded-2xl shadow-md h-64 sm:h-56 md:h-48 flex flex-col items-center justify-center hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] transition duration-300 ease-out">
+        <div class="shimmer w-20 h-20 flex items-center justify-center relative rounded-xl">
+          <i class="fa-solid fa-file-lines text-4xl text-blue-600 z-10"></i>
+        </div>
+        <h2 class="font-semibold text-gray-700 mt-3 text-base text-center">Lakip-Laptap</h2>
+      </div>
+    </a>
 
+    <!-- Card Renstra -->
+    <a href="URL_SPREADSHEET_RENSTRA" target="_blank" class="no-underline">
+      <div class="bg-white rounded-2xl shadow-md h-64 sm:h-56 md:h-48 flex flex-col items-center justify-center hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] transition duration-300 ease-out">
+        <div class="shimmer w-20 h-20 flex items-center justify-center relative rounded-xl">
+          <i class="fa-solid fa-bullseye text-4xl text-green-600 z-10"></i>
+        </div>
+        <h2 class="font-semibold text-gray-700 mt-3 text-base text-center">Renstra</h2>
+      </div>
+    </a>
 
-<!-- Card Renstra -->
-<a href="URL_SPREADSHEET_RENSTRA" target="_blank" class="no-underline">
-  <div class="bg-white rounded-2xl shadow-md h-48 flex flex-col items-center justify-center 
-              hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] 
-              transition duration-300 ease-out">
-    <div class="w-20 h-20 flex items-center justify-center">
-      <i class="fa-solid fa-bullseye text-4xl text-green-600"></i>
-    </div>
-    <h2 class="font-semibold text-gray-700 mt-3 text-sm sm:text-base text-center">Renstra</h2>
-  </div>
-</a>
+    <!-- Card RKA/DPA -->
+    <a href="URL_SPREADSHEET_RKA" target="_blank" class="no-underline">
+      <div class="bg-white rounded-2xl shadow-md h-64 sm:h-56 md:h-48 flex flex-col items-center justify-center hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] transition duration-300 ease-out">
+        <div class="shimmer w-20 h-20 flex items-center justify-center relative rounded-xl">
+          <i class="fa-solid fa-file-invoice-dollar text-4xl text-yellow-600 z-10"></i>
+        </div>
+        <h2 class="font-semibold text-gray-700 mt-3 text-base text-center">RKA/DPA</h2>
+      </div>
+    </a>
 
-<!-- Card RKA/DPA -->
-<a href="URL_SPREADSHEET_RKA" target="_blank" class="no-underline">
-  <div class="bg-white rounded-2xl shadow-md h-48 flex flex-col items-center justify-center 
-              hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] 
-              transition duration-300 ease-out">
-    <div class="w-20 h-20 flex items-center justify-center">
-      <i class="fa-solid fa-file-invoice-dollar text-4xl text-yellow-600"></i>
-    </div>
-    <h2 class="font-semibold text-gray-700 mt-3 text-sm sm:text-base text-center">RKA/DPA</h2>
-  </div>
-</a>
+    <!-- Card Rincian Usulan -->
+    <a href="URL_SPREADSHEET_USULAN" target="_blank" class="no-underline">
+      <div class="bg-white rounded-2xl shadow-md h-64 sm:h-56 md:h-48 flex flex-col items-center justify-center hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] transition duration-300 ease-out">
+        <div class="shimmer w-20 h-20 flex items-center justify-center relative rounded-xl">
+          <i class="fa-solid fa-list-check text-4xl text-purple-600 z-10"></i>
+        </div>
+        <h2 class="font-semibold text-gray-700 mt-3 text-base text-center">Rincian Usulan</h2>
+      </div>
+    </a>
 
-<!-- Card Rincian Usulan -->
-<a href="URL_SPREADSHEET_USULAN" target="_blank" class="no-underline">
-  <div class="bg-white rounded-2xl shadow-md h-48 flex flex-col items-center justify-center 
-              hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] 
-              transition duration-300 ease-out">
-    <div class="w-20 h-20 flex items-center justify-center">
-      <i class="fa-solid fa-list-check text-4xl text-purple-600"></i>
-    </div>
-    <h2 class="font-semibold text-gray-700 mt-3 text-sm sm:text-base text-center">Rincian Usulan</h2>
-  </div>
-</a>
+    <!-- Card Musrenbang & Epokir -->
+    <a href="URL_SPREADSHEET_MUSRENBANG" target="_blank" class="no-underline">
+      <div class="bg-white rounded-2xl shadow-md h-64 sm:h-56 md:h-48 flex flex-col items-center justify-center hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] transition duration-300 ease-out">
+        <div class="shimmer w-20 h-20 flex items-center justify-center relative rounded-xl">
+          <i class="fa-solid fa-chart-pie text-4xl text-pink-600 z-10"></i>
+        </div>
+        <h2 class="font-semibold text-gray-700 mt-3 text-base text-center">Musrenbang & Epokir</h2>
+      </div>
+    </a>
 
-<!-- Card Musrenbang & Epokir -->
-<a href="URL_SPREADSHEET_MUSRENBANG" target="_blank" class="no-underline">
-  <div class="bg-white rounded-2xl shadow-md h-48 flex flex-col items-center justify-center 
-              hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] 
-              transition duration-300 ease-out">
-    <div class="w-20 h-20 flex items-center justify-center">
-      <i class="fa-solid fa-chart-pie text-4xl text-pink-600"></i>
-    </div>
-    <h2 class="font-semibold text-gray-700 mt-3 text-sm sm:text-base text-center">Musrenbang & Epokir</h2>
-  </div>
-</a>
+    <!-- Card Rekomendasi -->
+    <a href="URL_SPREADSHEET_REKOMENDASI" target="_blank" class="no-underline">
+      <div class="bg-white rounded-2xl shadow-md h-64 sm:h-56 md:h-48 flex flex-col items-center justify-center hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] transition duration-300 ease-out">
+        <div class="shimmer w-20 h-20 flex items-center justify-center relative rounded-xl">
+          <i class="fa-solid fa-thumbs-up text-4xl text-green-500 z-10"></i>
+        </div>
+        <h2 class="font-semibold text-gray-700 mt-3 text-base text-center">Rekomendasi</h2>
+      </div>
+    </a>
 
-<!-- Card Rekomendasi -->
-<a href="URL_SPREADSHEET_REKOMENDASI" target="_blank" class="no-underline">
-  <div class="bg-white rounded-2xl shadow-md h-48 flex flex-col items-center justify-center 
-              hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] 
-              transition duration-300 ease-out">
-    <div class="w-20 h-20 flex items-center justify-center">
-      <i class="fa-solid fa-thumbs-up text-4xl text-green-500"></i>
-    </div>
-    <h2 class="font-semibold text-gray-700 mt-3 text-sm sm:text-base text-center">Rekomendasi</h2>
-  </div>
-</a>
+    <!-- Card Master Link Data -->
+    <a href="URL_SPREADSHEET_MASTER" target="_blank" class="no-underline">
+      <div class="bg-white rounded-2xl shadow-md h-64 sm:h-56 md:h-48 flex flex-col items-center justify-center hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] transition duration-300 ease-out">
+        <div class="shimmer w-20 h-20 flex items-center justify-center relative rounded-xl">
+          <i class="fa-solid fa-database text-4xl text-indigo-600 z-10"></i>
+        </div>
+        <h2 class="font-semibold text-gray-700 mt-3 text-base text-center">Master Link Data</h2>
+      </div>
+    </a>
 
-<!-- Card Master Link Data -->
-<a href="URL_SPREADSHEET_MASTER" target="_blank" class="no-underline">
-  <div class="bg-white rounded-2xl shadow-md h-48 flex flex-col items-center justify-center 
-              hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] 
-              transition duration-300 ease-out">
-    <div class="w-20 h-20 flex items-center justify-center">
-      <i class="fa-solid fa-database text-4xl text-indigo-600"></i>
-    </div>
-    <h2 class="font-semibold text-gray-700 mt-3 text-sm sm:text-base text-center">Master Link Data</h2>
-  </div>
-</a>
-
-<!-- Card RUP -->
-<a href="URL_SPREADSHEET_RUP" target="_blank" class="no-underline">
-  <div class="bg-white rounded-2xl shadow-md h-48 flex flex-col items-center justify-center 
-              hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] 
-              transition duration-300 ease-out">
-    <div class="w-20 h-20 flex items-center justify-center">
-      <i class="fa-solid fa-file-contract text-4xl text-red-600"></i>
-    </div>
-    <h2 class="font-semibold text-gray-700 mt-3 text-sm sm:text-base text-center">RUP</h2>
-  </div>
-</a>
+    <!-- Card RUP -->
+    <a href="URL_SPREADSHEET_RUP" target="_blank" class="no-underline">
+      <div class="bg-white rounded-2xl shadow-md h-64 sm:h-56 md:h-48 flex flex-col items-center justify-center hover:shadow-2xl hover:-translate-y-1 hover:scale-[1.02] transition duration-300 ease-out">
+        <div class="shimmer w-20 h-20 flex items-center justify-center relative rounded-xl">
+          <i class="fa-solid fa-file-contract text-4xl text-red-600 z-10"></i>
+        </div>
+        <h2 class="font-semibold text-gray-700 mt-3 text-base text-center">RUP</h2>
+      </div>
+    </a>
 
     <!-- Dashboard Progres -->
-    <a href="https://script.google.com/macros/s/AKfycbzUjxc1jFlN_P5o689Q-66cIr1n-uChWkoI8sO4yVPdPeows2PY3SeszxNZSogStGD8JQ/exec" target="_blank" class="no-underline col-span-2 md:col-span-4">
+    <a href="https://script.google.com/macros/s/AKfycbzUjxc1jFlN_P5o689Q-66cIr1n-uChWkoI8sO4yVPdPeows2PY3SeszxNZSogStGD8JQ/exec" 
+       target="_blank" class="no-underline col-span-1 sm:col-span-2 md:col-span-3 lg:col-span-4">
       <div class="bg-white p-6 rounded-2xl shadow-md h-32 flex flex-col items-center justify-center hover:shadow-xl hover:-translate-y-1 transition">
         <h2 class="font-bold text-gray-700 text-center text-sm md:text-lg">
           📊 Dashboard Progres Kegiatan & Keuangan TA2025
@@ -177,23 +143,21 @@
       <li><a href="https://sites.google.com/view/jas-konstruksi/progres-pekerjaan-jasa-konstruksi" class="text-blue-600 hover:underline">Bidang Jasa Konstruksi</a></li>
     </ul>
   </div>
-<!-- Footer Dark -->
-<footer class="mt-12 w-full bg-black/40 backdrop-blur-sm py-4 shadow-inner animate__animated animate__fadeInUp">
-  <div class="flex flex-col sm:flex-row items-center justify-center gap-3 text-white">
-    <!-- Logo instansi (bisa diganti sesuai kebutuhan) -->
-    <img src="D:\sub bagian program\assets\DPUTR HIJAU.png" class="h-10 w-10 object-contain brightness-0 invert"/>
-    <p class="text-sm font-medium text-center">
-      © <span id="year"></span> Dinas Pekerjaan Umum dan Tata Ruang – Kabupaten Bandung
-    </p>
-  </div>
-</footer>
 
-<script>
-  // Update tahun otomatis
-  document.getElementById("year").textContent = new Date().getFullYear();
-</script>
+  <!-- Footer Dark -->
+  <footer class="mt-12 w-full bg-black/40 backdrop-blur-sm py-4 shadow-inner animate__animated animate__fadeInUp">
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-3 text-white px-3">
+      <i class="fa-solid fa-building text-white text-xl"></i>
+      <p class="text-xs sm:text-sm font-medium text-center">
+        © <span id="year"></span> Dinas Pekerjaan Umum dan Tata Ruang – Kabupaten Bandung
+      </p>
+    </div>
+  </footer>
 
+  <script>
+    // Update tahun otomatis
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
 
 </body>
 </html>
-
